@@ -12,10 +12,12 @@ helm install mysql-innodbcluster mysql-operator/mysql-innodbcluster --namespace 
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 helm install phpmyadmin bitnami/phpmyadmin --namespace mall-gf-dapr --create-namespace
+# helm uninstall phpmyadmin --namespace mall-gf-dapr
 
 helm repo add dapr https://dapr.github.io/helm-charts/
 helm repo update
 helm upgrade --install dapr dapr/dapr --version=1.2 --namespace dapr-system --create-namespace --wait
 
-kubectl apply -k . 
+kubectl apply -k .
+kubectl delete -k .
 ```
