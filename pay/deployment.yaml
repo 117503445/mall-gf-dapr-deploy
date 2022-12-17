@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: pay
-        image: registry.cn-hangzhou.aliyuncs.com/117503445/mall-gf-dapr-pay
+        image: registry.cn-hangzhou.aliyuncs.com/117503445/mall-gf-dapr-pay:latest
         volumeMounts:
         - name: pay-config
           mountPath: /root/manifest/config

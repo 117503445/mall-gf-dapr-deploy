@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: order
-        image: registry.cn-hangzhou.aliyuncs.com/117503445/mall-gf-dapr-order
+        image: registry.cn-hangzhou.aliyuncs.com/117503445/mall-gf-dapr-order:latest
         volumeMounts:
         - name: order-config
           mountPath: /root/manifest/config
