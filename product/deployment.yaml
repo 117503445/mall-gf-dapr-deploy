@@ -32,6 +32,14 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8001
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8001
       volumes:
       - name: product-config
         configMap:
